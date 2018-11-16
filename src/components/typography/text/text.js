@@ -28,6 +28,9 @@ const Headline = props => {
   );
 };
 Headline.displayName = 'TextHeadline';
+Headline.defaultProps = {
+  elementType: 'h1',
+};
 Headline.propTypes = {
   elementType: PropTypes.oneOf(['h1', 'h2', 'h3']).isRequired,
   children: PropTypes.node.isRequired,
@@ -52,6 +55,9 @@ const Subheadline = props => {
   );
 };
 Subheadline.displayName = 'TextSubheadline';
+Subheadline.defaultProps = {
+  elementType: 'h4',
+};
 Subheadline.propTypes = {
   elementType: PropTypes.oneOf(['h4', 'h5']).isRequired,
   isBold: PropTypes.bool,
