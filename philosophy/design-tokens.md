@@ -5,25 +5,7 @@
 We use design tokens as the smallest form of information in our visual language.
 The tokens give semantic meaning to the plain palette of options we have.
 
-<!-- TOC -->
-
-- [1. Design Tokens](#1-design-tokens)
-  - [1.1. What are Choices, Decisions and Design Tokens?](#11-what-are-choices-decisions-and-design-tokens)
-  - [1.2. Choices](#12-choices)
-  - [1.3. Design Tokens](#13-design-tokens)
-  - [1.4. Design Tokens limit choices by making desicions](#14-design-tokens-limit-choices-by-making-desicions)
-    - [1.4.1. Example for colors](#141-example-for-colors)
-    - [1.4.2. Example for font-sizes](#142-example-for-font-sizes)
-  - [1.5. Token Structure](#15-token-structure)
-  - [1.6. Aspects](#16-aspects)
-    - [1.6.1. Aspect: Property](#161-aspect-property)
-    - [1.6.2. Aspect: Component Group](#162-aspect-component-group)
-    - [1.6.3. Aspect: State](#163-aspect-state)
-      - [1.6.3.1. `active` vs `focused`](#1631-active-vs-focused)
-    - [1.6.4. Aspect: Modifier](#164-aspect-modifier)
-      - [1.6.4.1. `on-dark`](#1641-on-dark)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [1. Design Tokens](#1-design-tokens)auto  - [1.1. What are Choices, Decisions and Design Tokens?](#11-what-are-choices-decisions-and-design-tokens)auto  - [1.2. Choices](#12-choices)auto  - [1.3. Design Tokens](#13-design-tokens)auto  - [1.4. Design Tokens limit choices by making desicions](#14-design-tokens-limit-choices-by-making-desicions)auto    - [1.4.1. Example for colors](#141-example-for-colors)auto    - [1.4.2. Example for font-sizes](#142-example-for-font-sizes)auto  - [1.5. Token Structure](#15-token-structure)auto  - [1.6. Aspects](#16-aspects)auto    - [1.6.1. Aspect: Property](#161-aspect-property)auto    - [1.6.2. Aspect: Component Group](#162-aspect-component-group)auto    - [1.6.3. Aspect: State](#163-aspect-state)auto      - [1.6.3.1. `active` vs `focused`](#1631-active-vs-focused)auto    - [1.6.4. Aspect: Modifier](#164-aspect-modifier)auto      - [1.6.4.1. `on-dark`](#1641-on-dark)autoauto<!-- /TOC -->
 
 ## 1.1. What are Choices, Decisions and Design Tokens?
 
@@ -58,6 +40,7 @@ An example for this is our color palette: The system offers a range of colors:
 ```
 # Choices (not design tokens)
 color-black
+color-white
 color-grey
 color-orange
 color-red
@@ -70,17 +53,17 @@ specific groups like font-colors, background-colors and border-colors. This
 helps to limit the choices when it comes to certain properties:
 
 ```
---token-background-color-for-input: color-grey
---token-background-color-for-input: color-grey
+--token-background-color-for-input: color-white
+--token-border-color-for-input: color-grey
 --token-font-color-for-input: color-black
 --token-font-color-for-input-when-disabled: color-grey
 ```
 
-For example, we made the **decision** to use the **choice** `color-grey` for our **token** `--token-background-color-for-input`.
+For example, we made the **decision** to use the **choice** `color-white` for our **token** `--token-background-color-for-input`.
 
-| Token                                | Choice       | Decision                                         |
-| ------------------------------------ | ------------ | ------------------------------------------------ |
-| `--token-background-color-for-input` | `color-grey` | `--token-background-color-for-input: color-grey` |
+| Token                                | Choice        | Decision                                          |
+| ------------------------------------ | ------------- | ------------------------------------------------- |
+| `--token-background-color-for-input` | `color-white` | `--token-background-color-for-input: color-white` |
 
 ### 1.4.2. Example for font-sizes
 
@@ -153,6 +136,10 @@ This leads us to four different aspects of a design token:
 - Component Group
 - State
 - Modifier
+
+Example:
+
+<img src="https://i.imgur.com/y8Dhedi.jpg" width="552" />
 
 ### 1.6.1. Aspect: Property
 
